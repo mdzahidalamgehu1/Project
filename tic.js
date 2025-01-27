@@ -79,18 +79,14 @@ const checkWinner = () =>{
         if(pos1!=""&&pos2!=""&pos1!=""){
             if(pos1===pos2 && pos2===pos3){
                 console.log("winner is ", pos1);
-                if(count==9){
-                    draw();
-                 }
-                 else{
-                    
                     showWinner(pos1);
+                     return;
                  }
             }
         }
-
-
-    }
+     if(count==9){
+                    draw();
+                 }
 }
 
 resetbtn.addEventListener("click", resetgame);
